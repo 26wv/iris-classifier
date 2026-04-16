@@ -1,0 +1,4 @@
+*.ipynb binary
+*.png binary
+*.joblib binary
+* text=auto

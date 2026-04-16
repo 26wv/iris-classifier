@@ -6,6 +6,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 import matplotlib.pyplot as plt
 import seaborn as sns
 import os
+import joblib
 
 # create ouput directory
 os.makedirs("outputs", exist_ok=True)
@@ -45,3 +46,5 @@ plt.savefig('outputs/confusion_matrix.png')
 plt.close()
 
 print("\nConfusion matrix saved to outputs/confusion_matrix.png")
+joblib.dump(model, 'outputs/iris_model.joblib')
+print("Model saved to outputs/iris_model.joblib")
